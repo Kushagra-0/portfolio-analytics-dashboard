@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { PortfolioData, MarketUpdate } from '../types/interfaces';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://portfolio-analytics-dashboard-production.up.railway.app/api';
 
 export const fetchPortfolioData = async (): Promise<PortfolioData> => {
   const response = await axios.get(`${API_BASE_URL}/portfolio/summary`);
