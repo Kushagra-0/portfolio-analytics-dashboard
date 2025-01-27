@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 8080;
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://kushagrashukladev:HXUs1HPUgvQbl6hQ@cluster0.xyixa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+mongoose.connect(process.env.MONGO_URI);
 
 app.use('/api/portfolio', portfolioRoutes);
 app.use('/api/market', marketRoutes);
