@@ -5,6 +5,9 @@ const portfolioRoutes = require('./routes/portfolioRoutes');
 const marketRoutes = require('./routes/marketRoutes');
 
 const app = express();
+const dotenv = require("dotenv");
+dotenv.config();
+
 const PORT = process.env.PORT || 8080;
 
 app.use(cors());
